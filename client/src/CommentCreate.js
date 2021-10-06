@@ -1,12 +1,12 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './style.css'
 
 const Fn = ({ postId }) => {
   const [content, setContent] = useState("");
   const onSubmit = async (event) => {
       event.preventDefault();
-      await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+      await axios.post(`http://posts.com/posts/${postId}/comments`, {
           content
       });
       setContent('');
