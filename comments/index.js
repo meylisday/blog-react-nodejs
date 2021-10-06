@@ -23,7 +23,7 @@ app.post('/posts/:id/comments', async (req, res) => {
 
     commentsByPostId[req.params.id] = comments;
 
-    await axios.post('http://blog-event-bus-srv:8080/events', {
+    await axios.post('http://blog-event-bus-srv:4005/events', {
         type: 'CommentCreated',
         data: {
             id: commentId,
