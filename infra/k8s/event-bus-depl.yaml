@@ -15,6 +15,7 @@ spec:
       containers:
         - name: event-bus
           image: meylisday/blog-event-bus
+          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
